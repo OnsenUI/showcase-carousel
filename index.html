@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Onsen UI Showcase Carousel</title>
+
+  <script src="lib/onsen/js/onsenui.min.js"></script>
+
+  <script src="js/showcase.js"></script>
+  <script src="js/components.js"></script>
+
+  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/showcase.css">
+  <link rel="stylesheet" href="css/components.css">
+
+</head>
+<body>
+
+<div id="wrapper">
+
+  <div id="showcase">
+    <ons-carousel auto-scroll initial-index="4" direction="horizontal" item-width="250px">
+
+      <!-- SWITCH -->
+      <ons-carousel-item id="c0">
+        <div class="tile">
+          <ons-page id="switch">
+            <ons-toolbar>
+              <div class="center">Switch</div>
+            </ons-toolbar>
+            <ons-list>
+              <ons-list-item>
+                <div class="center">Draggable</div>
+                <div class="right">
+                  <ons-switch></ons-switch>
+                </div>
+              </ons-list-item>
+              <ons-list-item tappable>
+                <label class="center" for="inner-switch">Click here!</label>
+                <div class="right">
+                  <ons-switch input-id="inner-switch"></ons-switch>
+                </div>
+              </ons-list-item>
+              <ons-list-item>
+                <div class="center">Disabled</div>
+                <div class="right">
+                  <ons-switch disabled checked></ons-switch>
+                </div>
+              </ons-list-item>
+            </ons-list>
+          </ons-page>
+        </div>
+      </ons-carousel-item>
+
+
+      <!-- POPOVER -->
+      <ons-carousel-item id="c1">
+        <div class="tile">
+          <ons-page id="popover">
+            <ons-toolbar>
+              <div class="center">Popover</div>
+              <div class="right">
+                <ons-toolbar-button id="popover-toolbar-button">
+                  <ons-icon size="32px, material:20px" icon="ion-ios-information-outline, material:md-more-vert"></ons-icon>
+                </ons-toolbar-button>
+              </div>
+            </ons-toolbar>
+            <ons-button id="popover-button">Click me</ons-button>
+            <ons-popover id="popover-element" direction="up down" cancelable>
+              <div style="text-align: center; opacity: 0.5;">
+                <p>This is a popover!</p>
+                <p><small>Click the background to remove the popover.</small></p>
+              </div>
+            </ons-popover>
+          </ons-page>
+        </div>
+      </ons-carousel-item>
+
+
+       <!-- CAROUSEL -->
+      <ons-carousel-item id="c2">
+        <div class="tile">
+          <ons-page id="carousel">
+            <ons-toolbar>
+              <div class="left">
+                <ons-toolbar-button class="show-prev" disabled>
+                  <ons-icon icon="ion-ios-arrow-back, material:md-arrow-left"></ons-icon>
+                </ons-toolbar-button>
+              </div>
+              <div class="center">Carousel</div>
+              <div class="right">
+                <ons-toolbar-button class="show-next">
+                  <ons-icon icon="ion-ios-arrow-forward, material:md-arrow-right"></ons-icon>
+                </ons-toolbar-button>
+              </div>
+            </ons-toolbar>
+            <ons-carousel swipeable overscrollable auto-scroll fullscreen auto-scroll-ratio="0.2" animation-options="{duration: 0.3}">
+              <ons-carousel-item style="background-color: #085078;">
+                <div class="item-label">I</div>
+              </ons-carousel-item>
+              <ons-carousel-item style="background-color: #373B44;">
+                <div class="item-label"><ons-icon icon="ion-ios-heart, material:md-favorite"></ons-icon></div>
+              </ons-carousel-item>
+              <ons-carousel-item style="background-color: rgb(210, 70, 70)"> <!-- #D38312;"> -->
+                <div class="item-label">ONSEN</div>
+              </ons-carousel-item>
+              <div class="cover-label">Swipe it!</div>
+            </ons-carousel>
+          </ons-page>
+        </div>
+      </ons-carousel-item>
+
+
+     <!-- FAB -->
+      <ons-carousel-item id="c3">
+        <div class="tile">
+          <ons-page id="fab">
+            <ons-toolbar>
+              <div class="center">Floating Action Button</div>
+            </ons-toolbar>
+              <ons-speed-dial position="right top" direction="left">
+                <ons-fab>
+                  <ons-icon icon="ion-edit, material:md-edit"></ons-icon>
+                </ons-fab>
+                <ons-speed-dial-item><ons-icon icon="ion-ios-personadd, material:md-account-add" size="22px, material:20px"></ons-speed-dial-item>
+                <ons-speed-dial-item><ons-icon icon="ion-ios-calendar-outline, material:md-calendar-note" size="20px"></ons-speed-dial-item>
+              </ons-speed-dial>
+              <ons-speed-dial position="left bottom" direction="right">
+                <ons-fab>
+                  <ons-icon icon="ion-settings, material:md-settings"></ons-icon>
+                </ons-fab>
+                <ons-speed-dial-item><ons-icon icon="ion-volume-mute, material:md-volume-off" size="22px, material:20px"></ons-icon></ons-speed-dial-item>
+                <ons-speed-dial-item><ons-icon icon="ion-ios-sunny, material:md-brightness-6" size="24px, material:18px"></ons-icon></ons-speed-dial-item>
+              </ons-speed-dial>
+          </ons-page>
+        </div>
+      </ons-carousel-item>
+
+
+      <!-- FORM -->
+      <ons-carousel-item id="c4">
+        <div class="tile">
+          <ons-page id="form">
+            <ons-toolbar>
+              <div class="center">Form input</div>
+            </ons-toolbar>
+            <ons-list>
+              <ons-list-item modifier="nodivider">
+                <div class="left"><ons-icon icon="ion-ios-person, material:md-account" size="26px, material:24px"></ons-icon></div>
+                <div class="center"><ons-input type="text" placeholder="Name" float modifier="underbar" style="width: 90%"></ons-input></div>
+                <div class="right"><ons-input type="number" placeholder="Age" float modifier="underbar" style="width: 45px"></ons-input></div>
+              </ons-list-item>
+              <ons-list-item modifier="longdivider">
+                <div class="left"><ons-input type="radio" name="love" checked> onsen</ons-input></div>
+                <div class="center"><ons-icon icon="ion-ios-heart, material:md-favorite"></ons-icon></div>
+                <div class="right"><ons-input type="radio" name="love" content-left>ramen </ons-input></div>
+              </ons-list-item>
+              <ons-list-item modifier="longdivider">
+                <div class="left"><ons-input type="checkbox"> onsen</ons-input></div>
+                <div class="center"><ons-icon icon="ion-ios-heart, material:md-favorite"></div>
+                <div class="right"><ons-input type="checkbox" content-left>ramen </ons-input></div>
+              </ons-list-item>
+            </ons-list>
+          </ons-page>
+        </div>
+      </ons-carousel-item>
+
+
+      <!-- PROGRESS -->
+      <ons-carousel-item id="c5">
+        <div class="tile">
+          <ons-page id="progress">
+            <ons-toolbar>
+              <div class="center">Progress</div>
+            </ons-toolbar>
+            <ons-progress-bar indeterminate></ons-progress-bar>
+
+              <div class="bar">
+                <span>Loading...</span>
+                <ons-progress-bar value="10"></ons-progress-bar>
+                <ons-progress-bar value="20" secondary-value="50"></ons-progress-bar>
+              </div>
+
+              <div class="circular">
+                <ons-progress-circular value="10"></ons-progress-circular>
+                <ons-progress-circular value="20" secondary-value="50"></ons-progress-circular>
+                <ons-progress-circular indeterminate></ons-progress-circular>
+              </div>
+
+              <div class="spin">
+                <ons-icon icon="fa-spinner" spin="true" size="30px"></ons-icon>
+                <ons-icon icon="fa-refresh" spin="true" size="30px"></ons-icon>
+              </div>
+          </ons-page>
+        </div>
+      </ons-carousel-item>
+
+
+      <!-- LOGIN -->
+      <ons-carousel-item id="c6">
+        <div class="tile">
+          <ons-page id="login">
+            <ons-toolbar>
+              <div class="center">Login</div>
+              <div class="right">
+                <ons-toolbar-button>
+                  <ons-icon icon="ion-log-in, material:md-sign-in"></ons-icon>
+                </ons-toolbar-button>
+              </div>
+            </ons-toolbar>
+            <ons-input placeholder="Email" type="text" modifier="underbar" float></ons-input>
+            <ons-input placeholder="Password" type="password" modifier="underbar" float></ons-input>
+            <ons-button modifier="large">Sign In</ons-button>
+            <ons-button modifier="quiet">Forgot password?</ons-button>
+          </ons-page>
+        </div>
+      </ons-carousel-item>
+
+      <!-- RANGE -->
+      <ons-carousel-item id="c7">
+        <div class="tile">
+          <ons-page id="range">
+            <ons-toolbar>
+              <div class="center">Range</div>
+            </ons-toolbar>
+            <ons-list>
+              <ons-list-item modifier="longdivider">
+                <ons-row>
+                  <ons-col align="center" width="36px">
+                    <ons-icon size="32px, material:20px" class="list__item__icon" icon="ion-ios-volume-low, material:md-volume-down"></ons-icon>
+                  </ons-col>
+                  <ons-col align="center">
+                    <ons-range value="30"></ons-range>
+                  </ons-col>
+                  <ons-col align="center" width="36px">
+                    <ons-icon size="32px, material:20px" class="list__item__icon" icon="ion-ios-volume-high, material:md-volume-up"></ons-icon>
+                  </ons-col>
+                </ons-row>
+              </ons-list-item>
+              <ons-list-item modifier="longdivider">
+                <ons-row>
+                  <ons-col align="center" width="36px">
+                    <ons-icon size="20px, material:18px" class="list__item__icon" icon="ion-ios-lightbulb, material:md-brightness-3"></ons-icon>
+                  </ons-col>
+                  <ons-col align="center">
+                    <ons-range value="50"></ons-range>
+                  </ons-col>
+                  <ons-col align="center" width="36px">
+                    <ons-icon size="21px, material: 18px" class="list__item__icon" icon="ion-ios-lightbulb-outline, material:md-brightness-2"></ons-icon>
+                  </ons-col>
+                </ons-row>
+              </ons-list-item>
+              <ons-list-item modifier="longdivider">
+                <ons-row>
+                  <ons-col align="center" width="36px">
+                    <ons-icon size="28px, material:18px" class="list__item__icon" icon="ion-ios-sunny-outline, material:md-brightness-5"></ons-icon>
+                  </ons-col>
+                  <ons-col align="center">
+                    <ons-range value="70" disabled></ons-range>
+                  </ons-col>
+                  <ons-col align="center" width="36px">
+                    <ons-icon size="32px, material:18px" class="list__item__icon" icon="ion-ios-sunny-outline, material:md-brightness-6"></ons-icon>
+                  </ons-col>
+                </ons-row>
+              </ons-list-item>
+            </ons-list>
+          </ons-page>
+        </div>
+      </ons-carousel-item>
+
+      <!-- DIALOG -->
+      <ons-carousel-item id="c8">
+        <div class="tile">
+          <ons-page id="dialog">
+            <ons-toolbar>
+              <div class="center">Dialog</div>
+              <div class="right">
+                <ons-toolbar-button>
+                  <ons-icon icon="ion-chatbox-working, material:md-comment-more"></ons-icon>
+                </ons-toolbar-button>
+              </div>
+            </ons-toolbar>
+
+            <ons-icon icon="ion-checkmark, material:md-check"></ons-icon>
+
+            <ons-alert-dialog id="dialog-element">
+              <div class="alert-dialog-title">Question!</div>
+              <div class="alert-dialog-content">What's the meaning of life?
+                <ons-input type="text" placeholder="Answer" float></ons-input>
+              </div>
+              <div class="alert-dialog-footer alert-dialog-footer--one">
+                <button class="alert-dialog-button alert-dialog-button--primal alert-dialog-button--one">OK</button>
+              </div>
+            </ons-alert-dialog>
+
+          </ons-page>
+        </div>
+      </ons-carousel-item>
+
+    </ons-carousel>
+  </div>
+
+  <div id="selector"></div>
+
+</div>
+
+
+</body>
+
+</html>

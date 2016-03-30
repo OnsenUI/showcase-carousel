@@ -1,0 +1,229 @@
+/* LOGIN */
+#login ons-input {
+  margin-top: 10px;
+}
+#login ons-input[modifier~=material] {
+  margin-top: 17px;
+}
+#login ons-button {
+  margin-top: 7px;
+}
+#login .page__content {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto 0;
+}
+
+
+/* RANGE */
+#range ons-list:not([modifier=material]) {
+  margin-top: 25px;
+}
+#range ons-list-item[modifier^=material] {
+  max-height: 56px;
+}
+#range ons-icon {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* DIALOG */
+#dialog .page__content ons-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -33px;
+  font-size: 90px;
+}
+#dialog .page__content ons-icon[icon*=ion-checkmark]:not([modifier=material]) {
+  margin-left: -39px;
+}
+#dialog .page__content ons-icon[icon*=ion-close]:not([modifier=material]) {
+  margin-left: -34px;
+}
+#dialog .page__content ons-icon[icon*=md-check][modifier=material] {
+  margin-left: -33px;
+}
+#dialog .page__content ons-icon[icon*=md-close][modifier=material] {
+  margin-left: -28px;
+  font-size: 100px;
+}
+#dialog .page__content ons-icon {
+  color: #8BC34A;
+}
+#dialog .page__content ons-icon.failure {
+  color: #F44336;
+}
+#dialog .page__content{
+  position: static;
+}
+.alert-dialog,
+.alert-dialog-container {
+  width: 200px;
+}
+.alert-dialog-content ons-input{
+  margin-top: 2px;
+  margin-left: 5px;
+  width: 100%;
+}
+.alert-dialog-content--material ons-input{
+  margin-top: 12px;
+  margin-left: 2px;
+}
+.alert-dialog-content--material {
+  margin: 4px 0 0 0;
+}
+.alert-dialog-button--material {
+  line-height: 0;
+  height: 32px;
+}
+.alert-dialog-container--material {
+  padding-top: 20px;
+}
+.alert-dialog-content--material {
+  font-size: 14px;
+  padding: 0 14px;
+}
+.alert-dialog-title--material {
+  font-size: 18px;
+  padding: 0 14px;
+}
+
+
+/* SWITCH */
+#switch  ons-list:not([modifier=material]) {
+  margin-top: 25px;
+}
+
+
+/* POPOVER */
+#popover ons-if,
+#popover ons-icon {
+  pointer-events: none;
+}
+#popover ons-button {
+  margin-top: 20px;
+}
+#popover .page__content {
+  z-index: 2000000;
+  overflow: visible;
+}
+#popover .popover {
+  margin-top: -55px;
+}
+#popover .popover--material {
+  margin-top: -59px !important;
+  left: 6px;
+}
+#popover .popover__container {
+  transform-origin: 100px 100px 0px !important;
+  overflow: visible;
+}
+#popover .popover__content {
+  left: 0 !important;
+  right: 0 !important;
+  width: 213px;
+}
+#popover .popover__arrow {
+  overflow: visible;
+  left: 195px !important;
+  right: 0 !important;
+}
+#popover .popover__arrow.center {
+  left: 107px !important;
+}
+
+
+/* CAROUSEL */
+#carousel ons-carousel-item {
+  display: table;
+  text-align: center;
+  height: 100% !important;
+}
+#carousel .item-label {
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  line-height: 1;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: default;
+}
+#carousel .cover-label {
+  text-align: center;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  bottom: 10px;
+  color: white;
+  cursor: default;
+}
+#carousel ons-icon[icon*=md-favorite][icon*=ion-ios-heart] {
+  /* color: rgb(210, 70, 70); */
+}
+
+
+/* FORM */
+#form ons-icon {
+  color: #444;
+}
+#form ons-icon[icon*=md-favorite][icon*=ion-ios-heart] {
+  color: #F44336;
+}
+#form .list__item--material__center ons-icon {
+  margin-left: 18px;
+}
+#form .checkbox--material__checkmark {
+  margin-right: 2px;
+}
+#form ons-list:not([modifier=material]) {
+  margin-top: 25px;
+}
+
+
+/* PROGRESS */
+#progress div.bar,
+#progress div.spin {
+  margin-top: 10px;
+  text-align: center;
+}
+#progress div.bar > * {
+  margin-bottom: 8px;
+}
+#progress div.circular {
+  margin-top: 20px;
+  text-align: center;
+}
+#progress div.spin > * {
+  color: #444;
+  margin: 0 10px;
+}
+#progress:not([modifier~=material]) .progress-bar__primary,
+#progress:not([modifier~=material]) .progress-bar--indeterminate:after,
+#progress:not([modifier~=material]) .progress-bar--indeterminate:before {
+  background-color: rgb(66, 130, 204);
+}
+#progress:not([modifier~=material]) .progress-bar__secondary {
+  background-color: rgba(108, 158, 214, 0.8);
+}
+#progress:not([modifier~=material]) .progress-circular__primary {
+  stroke: rgb(66, 130, 204);
+}
+#progress:not([modifier~=material]) .progress-circular__secondary {
+  stroke: rgba(108, 158, 214, 0.8);
+}
+
+
+/* FAB */
+#fab ons-speed-dial:first-of-type {
+  top: 65px;
+}
+#fab[modifier~=material] ons-speed-dial:first-of-type {
+  top: 77px;
+}
+#fab:not([modifier~=material]) ons-speed-dial > * {
+  background-color: rgb(66, 130, 204);
+}
+#fab:not([modifier~=material]) .ons-icon--ion {
+  vertical-align: -2%;
+}

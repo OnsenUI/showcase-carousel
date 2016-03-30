@@ -1,0 +1,115 @@
+body ::-webkit-scrollbar {
+  display: none;
+}
+
+#wrapper {
+  width: 1000px;
+  height: 300px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#showcase {
+  display: block;
+  width: 100%;
+  height: 245px;
+}
+
+#showcase > ons-carousel {
+  width: 100%;
+  height: 100%;
+  margin: 10px auto;
+}
+
+#showcase > ons-carousel > ons-carousel-item {
+  transition: all 0.3s cubic-bezier(0.1, 0.7, 0.1, 1);
+}
+
+.tile {
+  width: 225px;
+  height: 225px;
+  margin-left: 5px;
+  position: relative;
+
+  background: #fff;
+  border-radius: 2px;
+  float: left;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+/* DOT MODIFIER */
+#selector {
+  display: block;
+}
+.radio-button--dot {
+  margin: 3px;
+  line-height: 22px;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.radio-button--dot__checkmark {
+  width: 12px;
+  height: 12px;
+  overflow: visible;
+}
+.radio-button--dot__checkmark:before {
+  background: transparent;
+  border: 1px solid #AAA;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  -webkit-transition: border 0.2s ease;
+  -moz-transition: border 0.2s ease;
+  -o-transition: border 0.2s ease;
+  transition: border 0.2s ease;
+}
+.radio-button--dot__checkmark:after {
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.radio-button--dot__input {
+  cursor: pointer;
+}
+.radio-button--dot__input:checked + .radio-button__checkmark:before {
+  background: transparent;
+  border: 2px solid #AAA;
+}
+.radio-button--dot__input + .radio-button__checkmark:after {
+  background: #717171;
+  opacity: 1;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.radio-button--dot__input:checked + .radio-button__checkmark:after {
+  opacity: 1;
+  background: #AAA;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.radio-button--dot__input:disabled + .radio-button__checkmark {
+  opacity: 1;
+}
+.radio-button--dot__input:disabled + .radio-button__checkmark:after {
+  background-color: #afafaf;
+  border-color: #afafaf;
+}
+.radio-button--dot__input:disabled + .radio-button__checkmark:before {
+  border-color: #afafaf;
+}
