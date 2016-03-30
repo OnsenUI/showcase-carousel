@@ -1,6 +1,7 @@
 ons.platform.select('ios');
 
 ons.ready(function() {
+  document.querySelector('#placeholder').remove();
   var carousel = document.querySelector('#showcase > ons-carousel');
 
   // Generate selectors
@@ -45,7 +46,7 @@ ons.ready(function() {
 
   setInterval(function() {
     if (!hover) {
-      //next();
+      next();
     }
   }, 5000);
 

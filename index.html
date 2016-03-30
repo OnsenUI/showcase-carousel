@@ -95,7 +95,7 @@
                 </ons-toolbar-button>
               </div>
             </ons-toolbar>
-            <ons-carousel swipeable overscrollable auto-scroll fullscreen auto-scroll-ratio="0.2" animation-options="{duration: 0.3}">
+            <ons-carousel initial-index="0" swipeable overscrollable auto-scroll fullscreen auto-scroll-ratio="0.2" animation-options="{duration: 0.3}">
               <ons-carousel-item style="background-color: #085078;">
                 <div class="item-label">I</div>
               </ons-carousel-item>
@@ -123,8 +123,8 @@
                 <ons-fab>
                   <ons-icon icon="ion-edit, material:md-edit"></ons-icon>
                 </ons-fab>
-                <ons-speed-dial-item><ons-icon icon="ion-ios-personadd, material:md-account-add" size="22px, material:20px"></ons-speed-dial-item>
-                <ons-speed-dial-item><ons-icon icon="ion-ios-calendar-outline, material:md-calendar-note" size="20px"></ons-speed-dial-item>
+                <ons-speed-dial-item><ons-icon icon="ion-ios-personadd, material:md-account-add" size="22px, material:20px"></ons-icon></ons-speed-dial-item>
+                <ons-speed-dial-item><ons-icon icon="ion-ios-calendar-outline, material:md-calendar-note" size="20px"></ons-icon></ons-speed-dial-item>
               </ons-speed-dial>
               <ons-speed-dial position="left bottom" direction="right">
                 <ons-fab>
@@ -158,7 +158,7 @@
               </ons-list-item>
               <ons-list-item modifier="longdivider">
                 <div class="left"><ons-input type="checkbox"> onsen</ons-input></div>
-                <div class="center"><ons-icon icon="ion-ios-heart, material:md-favorite"></div>
+                <div class="center"><ons-icon icon="ion-ios-heart, material:md-favorite"></ons-icon></div>
                 <div class="right"><ons-input type="checkbox" content-left>ramen </ons-input></div>
               </ons-list-item>
             </ons-list>
@@ -302,6 +302,8 @@
   </div>
 
   <div id="selector"></div>
+
+  <div id="placeholder"></div>
 
 </div>
 

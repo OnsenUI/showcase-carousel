@@ -60,6 +60,7 @@ var controllers = {
     };
 
     page.addEventListener('postchange', function(event) {
+      carousel.setAttribute('initial-index', event.activeIndex);
 
       if (event.activeIndex === carousel.getCarouselItemCount() - 1) {
         prev.removeAttribute('disabled');
