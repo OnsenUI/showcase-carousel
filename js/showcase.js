@@ -52,25 +52,20 @@ ons.ready(function() {
 
 });
 
-
-function px2int(px) {
-  return (+ px.trim().slice(0, -2));
-}
-
 function swipe(next, times) {
   var carousel = document.querySelector('#showcase > ons-carousel');
   var items = ons._util.arrayFrom(document.querySelectorAll('#showcase > ons-carousel > ons-carousel-item'));
-  var width = px2int(carousel.getAttribute('item-width'));
+  var width = parseInt(carousel.getAttribute('item-width'));
 
   var slide = function() {
     for (var i = 0; i < items.length; i++) {
-      items[i].style.left = px2int(items[i].style.left) - (width * times * (next ? 1 : -1)) + 'px';
+      items[i].style.left = parseInt(items[i].style.left) - (width * times * (next ? 1 : -1)) + 'px';
     }
   };
 
   var update = function() {
     var limit = next ? times : items.length;
-    var currentWidth = px2int(items[0].style.left);
+    var currentWidth = parseInt(items[0].style.left);
 
     for (var i = limit - times; i < limit; i++, j++) {
       if (next) {
