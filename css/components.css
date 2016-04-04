@@ -170,8 +170,11 @@
 #form ons-icon[icon*=md-favorite][icon*=ion-ios-heart] {
   color: #F44336;
 }
+#form .list__item__center ons-icon {
+  margin-left: -3px;
+}
 #form .list__item--material__center ons-icon {
-  margin-left: 18px;
+  margin-left: 13px;
 }
 #form .checkbox--material__checkmark {
   margin-right: 2px;
