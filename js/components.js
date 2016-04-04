@@ -1,12 +1,12 @@
 document.addEventListener('init', function(event) {
   var page = event.target;
-  if (controllers.hasOwnProperty(page.id)) {
-    controllers[page.id](page);
+  if (app.controllers.hasOwnProperty(page.id)) {
+    app.controllers[page.id](page);
   }
 });
 
 
-var controllers = {
+app.controllers = {
   login: function(page) {
 
   },

@@ -1,3 +1,4 @@
+var app = {};
 ons.platform.select('ios');
 
 ons.ready(function() {
@@ -26,7 +27,7 @@ ons.ready(function() {
     var next = (nextRelativeIndex - currentRelativeIndex) >= 0;
     var times = Math.abs(currentRelativeIndex - nextRelativeIndex);
 
-    swipe(next, times);
+    app.swipe(next, times);
 
     currentAbsoluteIndex = nextAbsoluteIndex;
     currentRelativeIndex = (nextRelativeIndex + (next ? -times : +times)) % total;
@@ -35,24 +36,24 @@ ons.ready(function() {
     }
   });
 
-  var hover = false;
+  app.hover = false;
   document.getElementById('wrapper').onmouseenter = function() {
-    hover = true;
+    app.hover = true;
   };
   document.getElementById('wrapper').onmouseleave = function() {
-    hover = false;
+    app.hover = false;
   };
 
 
   setInterval(function() {
-    if (!hover) {
-      next();
+    if (!app.hover) {
+      app.next();
     }
   }, 6000);
 
   setTimeout(function() {
     setInterval(function() {
-      if (!hover) {
+      if (!app.hover) {
         ons.forcePlatformStyling(ons.platform._renderPlatform === 'ios' ? 'android' : 'ios');
       }
     }, 6000);
@@ -60,7 +61,7 @@ ons.ready(function() {
 
 });
 
-function swipe(next, times) {
+app.swipe = function(next, times) {
   var carousel = document.querySelector('#showcase > ons-carousel');
   var items = ons._util.arrayFrom(document.querySelectorAll('#showcase > ons-carousel > ons-carousel-item'));
   var width = parseInt(carousel.getAttribute('item-width'));
@@ -100,18 +101,18 @@ function swipe(next, times) {
   }
 }
 
-function next() {
+app.next = function() {
   var currentInput = ons._util.findParent(document.querySelector('input[name="showcase"]:checked'), 'ons-input');
   var nextInput = currentInput.nextElementSibling || currentInput.parentElement.firstElementChild;
   nextInput.checked = true;
 
-  swipe(true, 1);
+  app.swipe(true, 1);
 }
 
-function prev() {
+app.prev = function() {
   var currentInput = ons._util.findParent(document.querySelector('input[name="showcase"]:checked'), 'ons-input');
   var prevInput = currentInput.previousElementSibling || currentInput.parentElement.lastElementChild;
   prevInput.checked = true;
 
-  swipe(false, 1);
+  app.swipe(false, 1);
 }

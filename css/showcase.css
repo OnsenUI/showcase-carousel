@@ -53,14 +53,14 @@ body ::-webkit-scrollbar {
   display: block;
 }
 .radio-button--dot {
-  margin: 3px;
+  margin: 5px;
   line-height: 22px;
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 .radio-button--dot__checkmark {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   overflow: visible;
 }
 .radio-button--dot__checkmark:before {
@@ -71,8 +71,8 @@ body ::-webkit-scrollbar {
   box-sizing: border-box;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   -webkit-transition: border 0.2s ease;
   -moz-transition: border 0.2s ease;
   -o-transition: border 0.2s ease;
@@ -81,8 +81,8 @@ body ::-webkit-scrollbar {
 .radio-button--dot__checkmark:after {
   top: 0;
   left: 0;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border: none;
   -webkit-border-radius: 50%;
   border-radius: 50%;
