@@ -57,34 +57,34 @@
 #dialog .page__content{
   position: static;
 }
-.alert-dialog,
-.alert-dialog-container {
+#dialog .alert-dialog,
+#dialog .alert-dialog-container {
   width: 200px;
 }
-.alert-dialog-content ons-input{
+#dialog .alert-dialog-content ons-input{
   margin-top: 2px;
   margin-left: 5px;
   width: 100%;
 }
-.alert-dialog-content--material ons-input{
+#dialog .alert-dialog-content--material ons-input{
   margin-top: 12px;
   margin-left: 2px;
 }
-.alert-dialog-content--material {
+#dialog .alert-dialog-content--material {
   margin: 4px 0 0 0;
 }
-.alert-dialog-button--material {
+#dialog .alert-dialog-button--material {
   line-height: 0;
   height: 32px;
 }
-.alert-dialog-container--material {
+#dialog .alert-dialog-container--material {
   padding-top: 20px;
 }
-.alert-dialog-content--material {
+#dialog .alert-dialog-content--material {
   font-size: 14px;
   padding: 0 14px;
 }
-.alert-dialog-title--material {
+#dialog .alert-dialog-title--material {
   font-size: 18px;
   padding: 0 14px;
 }

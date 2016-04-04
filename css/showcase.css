@@ -122,3 +122,7 @@ body ::-webkit-scrollbar {
 .radio-button--dot__input:disabled + .radio-button__checkmark:before {
   border-color: #afafaf;
 }
+
+* {
+  transition: background-color 0.15s ease-out, margin 0.15s ease-out, height 0.15s ease-out, width 0.15s ease-out;
+}

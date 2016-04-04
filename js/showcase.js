@@ -48,7 +48,15 @@ ons.ready(function() {
     if (!hover) {
       next();
     }
-  }, 5000);
+  }, 6000);
+
+  setTimeout(function() {
+    setInterval(function() {
+      if (!hover) {
+        ons.forcePlatformStyling(ons.platform._renderPlatform === 'ios' ? 'android' : 'ios');
+      }
+    }, 6000);
+  }, 3000);
 
 });
 
