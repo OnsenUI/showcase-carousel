@@ -161,6 +161,9 @@
 #carousel ons-icon[icon*=md-favorite][icon*=ion-ios-heart] {
   /* color: rgb(210, 70, 70); */
 }
+#carousel > ons-carousel > ons-carousel-item {
+  transition: all 0.3s cubic-bezier(0.1, 0.7, 0.1, 1);
+}
 
 
 /* FORM */

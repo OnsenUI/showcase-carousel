@@ -36,21 +36,33 @@ ons.ready(function() {
     }
   });
 
-  app.hover = false;
+  // Handle user hovering
+  app.hover = 0;
   document.getElementById('wrapper').onmouseenter = function() {
-    app.hover = true;
+    app.hover++;
   };
   document.getElementById('wrapper').onmouseleave = function() {
-    app.hover = false;
+    var id = app.hover;
+    setTimeout(function() {
+      if (id === app.hover) {
+        ons._util.arrayFrom(document.querySelectorAll('#showcase ons-input:not([type=checkbox]):not([type=radio])'))
+          .forEach(function(element) {
+            element.value = '';
+          });
+
+        app.hover = 0;
+      }
+    }, 3000);
   };
 
-
+  // Auto swipe the carousel
   setInterval(function() {
     if (!app.hover) {
       app.next();
     }
   }, 6000);
 
+  // Auto change platform
   setTimeout(function() {
     setInterval(function() {
       if (!app.hover) {
