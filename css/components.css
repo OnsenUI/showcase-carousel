@@ -25,6 +25,9 @@
 #range ons-icon {
   color: rgba(0, 0, 0, 0.5);
 }
+#range .range__left {
+  transition: width 0s ease-out;
+}
 
 
 /* DIALOG */

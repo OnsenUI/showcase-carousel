@@ -52,7 +52,7 @@ ons.ready(function() {
 
         app.hover = 0;
       }
-    }, 3000);
+    }, 2000);
   };
 
   // Auto swipe the carousel
