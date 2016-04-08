@@ -57,7 +57,7 @@ ons.ready(function() {
 
   // Auto swipe the carousel
   setInterval(function() {
-    if (!app.hover) {
+    if (!app.hover && document.visibilityState === 'visible') {
       app.next();
     }
   }, 6000);
