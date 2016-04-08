@@ -3,8 +3,8 @@ body ::-webkit-scrollbar {
 }
 
 #wrapper {
-  width: 1000px;
-  height: 300px;
+  width: 1250px;
+  height: 270px;
   padding-left: 10px;
   box-sizing: border-box;
   text-align: center;
@@ -126,4 +126,25 @@ body ::-webkit-scrollbar {
 
 * {
   transition: background-color 0.15s ease-out, margin 0.15s ease-out, height 0.15s ease-out, width 0.15s ease-out;
+}
+
+@media (max-width: 1243px) {
+  #wrapper {
+    width: 1000px;
+  }
+}
+@media (max-width: 993px) {
+  #wrapper {
+    width: 750px;
+  }
+}
+@media (max-width: 743px) {
+  #wrapper {
+    width: 500px;
+  }
+}
+@media (max-width: 493px) {
+  #wrapper {
+    width: 250px;
+  }
 }
